@@ -22,3 +22,7 @@ Route::get('/create-form', 'BooksController@createForm');
 Route::post('/author/create', 'AuthorsController@authorCreate');
 
 Route::post('/book/create', 'BooksController@bookCreate');
+
+Route::get('/book/{id}/update-form', 'BooksController@updateForm');
+
+Route::post('/book/update', 'BooksController@update');

@@ -63,4 +63,18 @@ class BooksController extends Controller
         Book::where('id', $id)->delete();
         return redirect('/index');
     }
+
+    public function search(Request $request)
+    {
+        // 1つ目の処理
+        $keyword = $request->input('keyword');
+        // 2つ目の処理
+        if(!empty($keyword)){
+            $books = Book::where('title','like', '%'.$keyword.'%')->get();
+        }else{
+            $books = Book::all();
+        }
+        // 3つ目の処理
+        return view('books.index',['books'=>$books]);
+    }
 }

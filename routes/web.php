@@ -28,3 +28,5 @@ Route::get('/book/{id}/update-form', 'BooksController@updateForm');
 Route::post('/book/update', 'BooksController@update');
 
 Route::get('/book/{id}/delete', 'BooksController@delete');
+
+Route::post('/search', 'BooksController@search');

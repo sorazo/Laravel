@@ -57,4 +57,10 @@ class BooksController extends Controller
         // 3つ目の処理
         return redirect('/index');
     }
+
+    public function delete($id)
+    {
+        Book::where('id', $id)->delete();
+        return redirect('/index');
+    }
 }

@@ -30,3 +30,7 @@ Route::post('/book/update', 'BooksController@update');
 Route::get('/book/{id}/delete', 'BooksController@delete');
 
 Route::post('/search', 'BooksController@search');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

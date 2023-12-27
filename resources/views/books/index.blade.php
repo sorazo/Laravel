@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+@extends('app')
+<!-- <!DOCTYPE html>
 <html>
 
 <head>
@@ -12,8 +13,9 @@
 
     <header>
         <a href="/index"><h1>Laravelを使ったCRUD機能の実装</h1></a>
-    </header>
+    </header> -->
 
+    @section('content')
     <div class="container">
         <form action="/search" method="post">
         @csrf
@@ -46,9 +48,10 @@
             @endforeach
         </table>
     </div>
-    <footer>
+    @endsection
+    <!-- <footer>
         <small>Laravel@test.curriculum</small>
     </footer>
 </body>
 
-</html>
+</html> -->
